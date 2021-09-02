@@ -11,3 +11,8 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+.Main-burger{
+	max-width: 80%;
+	margin-right: 10%;
+    margin-left: 10%
+}
