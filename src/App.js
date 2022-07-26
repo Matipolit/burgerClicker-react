@@ -1,11 +1,8 @@
 import { useState, useEffect } from 'react';
-import { BrowserRouter as Router, Route, Link, useLocation } from 'react-router-dom';
 import burgerImage from './assets/burger.png'
-
-import logo from './logo.svg';
+import { Link } from "react-router-dom";
 import './App.css';
 
-import Shop from './components/Shop';
 
 function App() {
   //let location = useLocation();
@@ -17,25 +14,13 @@ function App() {
 
 
   return (
-    <Router>
-
       <div className="App">
-        <Route path='/' exact render = {() => (
-          <>
-              <h1>{burgers}</h1>
-              <img src={burgerImage} className="Main-burger" alt="burger"
-              onClick={() => burgerClick()} />
-          </>
-        )} />
-        <Route path='/shop' component={Shop} />
-         {/* {location.pathname === '/' &&( */}
-          <p><Link to='/shop'>go to shop</Link></p>
-        {/* //)} */}
-
-
+          <h1>{burgers}</h1>
+          <img src={burgerImage} className="Main-burger" alt="burger"
+            onClick={() => burgerClick()} />
+        <p><Link to='/shop'>go to shop</Link></p>
       </div>
 
-    </Router>
   );
 }
 
