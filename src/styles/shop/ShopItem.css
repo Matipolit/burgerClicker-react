@@ -1,0 +1,35 @@
+.shopItemContainer{
+	display: flex;
+}
+
+.shopItemInfo{
+	font-size: 1.1rem;
+	margin: 0.5rem;
+	text-align: left;
+}
+
+.verticalSplitter{
+	margin-left: auto;
+}
+
+.itemAmountContainer{
+	display: flex;
+	justify-content: center;
+	align-content: center;
+	flex-direction: column;
+}
+
+.itemAmount{
+	margin-left: 0.25rem;
+	margin-right: 0.25rem;
+	margin-bottom: 0.25rem;
+	margin-top: auto;
+	font-size: 1.5rem;
+	font-weight: bold;
+
+}
+.itemBought{
+	margin-left: 0.25rem;
+	margin-right: 0.25rem;
+	margin-top: 0.25rem;
+}

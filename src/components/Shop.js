@@ -1,12 +1,46 @@
+import { useContext } from 'react';
 import { Link } from "react-router-dom"
+import BurgerAmount from './BurgerAmount'
+import ShopItem from "./shop/ShopItem"
+import { DataContext } from '../DataContext';
+import "../styles/Shop.css"
 
-const Shop = () => {
+
+function Shop(){
+    const [burgers, setBurgers, storeItems, setStoreItems] = useContext(DataContext);
+
+    const buyItem = ( item, index ) => {
+        if(burgers>=item.price){
+            setBurgers(burgers-item.price);
+            var oldItems = storeItems;
+            setStoreItems(oldItems => ({
+                bpc: oldItems.bpc.map(
+                    item => item.index === index? { ...item, amount: item.amount+1}:item
+                )
+            }))
+        }else{
+            alert("Not enough 🍔!");
+        }
+    }
+
     return (
-        <div>
-            <button onclick="Buy(1)">Assistant</button><p id="assistantPrice">60 B | +1 Bpc</p>
-            <button onclick="Buy(2)">Chef</button><p id="chefPrice">800 B | +3 Bpc</p>
-            <button onclick="Buy(3)">Cooking Robot</button><p id="crPrice">15000 B | +6 Bpc</p>
-            <p><Link to='/'>Go back</Link></p>
+        <div className="bigDiv centerText">
+
+        <BurgerAmount burgers={burgers} />
+            <div className="shopItems thickBorder">        
+                {storeItems.bpc.map((item, index)=>{
+                    return(
+                        <div key={index}>
+                            <ShopItem name={item.name} price={item.price}
+                                increase={item.bpc} increaseType="bpc" amount={item.amount}
+                                buyItem={() => buyItem( item, index )} />
+                            { index != storeItems.bpc.length-1 &&
+                                <div className="horizontalItemSplitter"/>
+                            }
+                        </div>
+                    )})}
+            </div>
+            <p className="link atBottomDiv"><Link className="link" to="/">🔙 Go back</Link></p>        
         </div>
     )
 }

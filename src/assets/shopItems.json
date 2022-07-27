@@ -1,0 +1,22 @@
+{
+  "bpc" : [
+    {
+      "index" : 0,
+      "name" : "Assistant",
+      "price" : 60,
+      "bpc" : 1
+    },
+    {
+      "index" : 1,
+      "name" : "Chef",
+      "price" : 800,
+      "bpc" : 3
+    },
+    {
+      "index" : 2,
+      "name" : "Cooking Robot",
+      "price" : 15000,
+      "bpc" : 6
+    }
+  ]
+}

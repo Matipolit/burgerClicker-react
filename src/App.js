@@ -1,27 +1,23 @@
-import { useState, useEffect } from 'react';
-import burgerImage from './assets/burger.png'
-import { Link } from "react-router-dom";
-import './App.css';
+import { useState, useEffect, createContext } from 'react';
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Home from './components/Home';
+import Shop from './components/Shop';
+import { DataProvider } from './DataContext'
 
 
 function App() {
-  //let location = useLocation();
-  const [burgers, setBurgers] = useState(0)
+  return(
+    <DataProvider>
+      <Router>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/shop" element={<Shop />} />
+        </Routes>
+      </Router>
+    </DataProvider>
+  )
 
-  const burgerClick = () => {
-    setBurgers(burgers+1)
-  }
 
-
-  return (
-      <div className="App">
-          <h1>{burgers}</h1>
-          <img src={burgerImage} className="Main-burger" alt="burger"
-            onClick={() => burgerClick()} />
-        <p><Link to='/shop'>go to shop</Link></p>
-      </div>
-
-  );
 }
 
 export default App;
