@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/burgerClicker/static/css/main.f1651fea.css",
+    "main.js": "/burgerClicker/static/js/main.a939444d.js",
+    "static/media/burger.png": "/burgerClicker/static/media/burger.cd05c3337f5f5030d092.png",
+    "index.html": "/burgerClicker/index.html",
+    "main.f1651fea.css.map": "/burgerClicker/static/css/main.f1651fea.css.map",
+    "main.a939444d.js.map": "/burgerClicker/static/js/main.a939444d.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f1651fea.css",
+    "static/js/main.a939444d.js"
+  ]
+}
