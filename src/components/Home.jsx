@@ -1,24 +1,25 @@
-import { useState } from 'react';
-import burgerImage from '../assets/burger.png';
-import "../styles/Home.css"
-import NewBurgerAnimation from './NewBurgerAnimation/NewBurgerAnimation';
+import { useState } from "react";
+import burgerImage from "../assets/burger.png";
+import "../styles/Home.css";
+import NewBurgerAnimation from "./NewBurgerAnimation/NewBurgerAnimation";
 
-function Home({burgers, setBurgers, bpc}){
+function Home({ burgers, setBurgers, bpc }) {
+    const [animations, setAnimations] = useState([]);
 
-  const [animations, setAnimations] = useState([])
+    function burgerClick() {
+        setBurgers(burgers + bpc);
+    }
 
-  function burgerClick(){
-    setBurgers(burgers+bpc);
-  }
-
-  return (
-    <div>
-      <img src={burgerImage} className="Main-burger" alt="burger"
-        onClick={() => burgerClick()} />
-    </div>
-
-  );
-
+    return (
+        <div>
+            <img
+                src={burgerImage}
+                className="Main-burger"
+                alt="burger"
+                onClick={() => burgerClick()}
+            />
+        </div>
+    );
 }
 
-export default Home; 
+export default Home;
