@@ -5,7 +5,7 @@ const ShopItem = ({ name, price, increase, increaseType, amount, buyItem }) => {
     <div className="shopItemContainer">
       <div className="shopItemInfo">
         <button className="thinBorder" onClick={buyItem}>{name}</button>
-        <p>{price} B | + {increase} {increaseType}</p>
+        <p>{price} 🍔 | + {increase} {increaseType}</p>
       </div>
       <div className="verticalItemSplitter verticalSplitter"/>
       <div className="itemAmountContainer">

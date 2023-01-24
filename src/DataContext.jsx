@@ -1,9 +1,9 @@
 import React, {useState, createContext} from 'react'
-
+import { ShopData } from './components/shop/ShopData';
 
 export const DataContext = createContext();
 export const DataProvider = (props) => {
-    var items = require("./assets/shopItems.json");
+    const items = ShopData;
     items.bpc = items.bpc.map( (item) => {
         item.amount = 0;
         return item;
