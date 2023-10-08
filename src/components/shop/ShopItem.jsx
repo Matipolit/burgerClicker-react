@@ -13,7 +13,7 @@ const ShopItem = ({ name, price, increase, increaseType, amount, buyItem }) => {
             </div>
             <div className="verticalItemSplitter verticalSplitter" />
             <div className="itemAmountContainer">
-                <p className="itemBought">Bought:</p>
+                <p className="itemBought">Owned:</p>
                 <p className="itemAmount">{amount}</p>
             </div>
         </div>

@@ -6,3 +6,8 @@
 	width: fit-content;
 }
 
+.shopItemsContainer {
+	display: flex;
+	gap: 1rem;
+}
+
